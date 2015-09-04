@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Gruntstarter</title>
+        <link rel="manifest" href="/manifest.json">
+        <script src="/javascript/gruntstarter.concat.js"></script>
+        <link type="text/css" href="/css/styles.concat.css" rel="stylesheet" />
+    </head>
+    <body ng-app="GruntstarterApp">
+        <div class="container">
+            <div class="header clearfix">
+                <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="#">Home</a></li>
+                    <li role="presentation"><a href="#">About</a></li>
+                    <li role="presentation"><a href="#">Contact</a></li>
+                </ul>
+                </nav>
+                <h3 class="text-muted">Gruntstarter</h3>
+            </div>
+            <div class="jumbotron">
+                <h1>Grunt and Boxstarter</h1>
+                <p class="lead">Grunt and Boxstarter are two tooling components that can be used for different automation tasks.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4>Grunt</h4>
+                    <div ng-controller="GruntController">{{ info }}</div>
+                    <ul>
+                        <li>
+                            File minification and concatenation of assets:
+                            <ul>
+                                <li>Before processing: ~1.69 MB</li>
+                                <li>After processing: ~383 KB</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <h4>Boxstarter</h4>
+                    <div ng-controller="BoxstarterController">{{ info }}</div>
+                </div>
+            </div>
+            <div class="d3 clearfix">
+                <h4>File Size Difference</h4>
+                <div id="d3">
+                </div>
+            </div>
+            <footer class="footer">
+                <p></p>
+            </footer>
+        </div>
+    </body>
+</html>

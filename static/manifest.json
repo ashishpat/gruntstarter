@@ -1,0 +1,10 @@
+{
+    "lang": "en",
+    "name": "Gruntstarter - Grunt and Boxstarter Automation",
+    "short_name": "Gruntstarter",
+    "start_url": "",
+    "scope": "/",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "theme_color": "aliceblue"
+}
