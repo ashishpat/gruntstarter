@@ -25,7 +25,7 @@ var Gruntstarter;
     Gruntstarter.Boxstarter = Boxstarter;
     function loadPieChart() {
         var data = [1, 6];
-        var width = 960;
+        var width = 940;
         var height = 500;
         var outerRadius = height / 2 - 30;
         var innerRadius = outerRadius / 3;

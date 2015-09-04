@@ -31,7 +31,8 @@ module.exports = function (grunt) {
             scripts: {
                 expand: true,
                 cwd: "static/javascript",
-                src: ["**/*.js", "!**/*.min.js", "!**/*.concat.js"],
+                //src: ["**/*.js", "!**/*.min.js", "!**/*.concat.js"],
+                src: ["**/*.concat.js"],
                 dest: "static/javascript",
                 ext: ".min.js"
             }
@@ -40,7 +41,8 @@ module.exports = function (grunt) {
             styles: {
                 expand: true,
                 cwd: "static/css",
-                src: ["**/*.css", "!**/*.min.css", "!**/*.concat.css"],
+                //src: ["**/*.css", "!**/*.min.css", "!**/*.concat.css"],
+                src: ["**/*.concat.css"],
                 dest: "static/css",
                 ext: ".min.css"
             }
@@ -52,14 +54,14 @@ module.exports = function (grunt) {
                     "static/bower_components/angular/angular.min.js",
                     "static/bower_components/d3/d3.min.js",
                     "static/bower_components/metron/javascript/metron.min.js",
-                    "static/javascript/gruntstarter.min.js"
+                    "static/javascript/gruntstarter.js"
                     ],
                 dest: 'static/javascript/gruntstarter.concat.js'
             },
             styles: {
                 src: [
                     "static/bower_components/bootstrap/dist/css/bootstrap.min.css",
-                    "static/css/styles.min.css"
+                    "static/css/styles.css"
                     ],
                 dest: 'static/css/styles.concat.css'
             }
@@ -99,9 +101,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-perfbudget');
 
-    grunt.registerTask('default', ['typescript', 'less', 'uglify', 'cssmin', 'concat']);
-    grunt.registerTask('css', ['less', 'cssmin', 'concat:styles']);
-    grunt.registerTask('javascript', ['typescript', 'uglify', 'concat:scripts']);
+    grunt.registerTask('default', ['typescript', 'less', 'concat', 'uglify', 'cssmin']);
+    grunt.registerTask('css', ['less', 'concat:styles', 'cssmin']);
+    grunt.registerTask('javascript', ['typescript', 'concat:scripts', 'uglify']);
     grunt.registerTask('perf', ['perfbudget']);
     
     grunt.registerTask('command-line', function() {
