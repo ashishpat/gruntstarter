@@ -27,3 +27,7 @@ bower init
 ```
 
 You can now run the `grunt` commands or `node server.js` to see the test web page consuming the grunt output.
+
+### Grunt Plugins
+
+The following Grunt plugins are 
