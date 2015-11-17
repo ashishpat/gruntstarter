@@ -21,9 +21,9 @@ Once the global packages are installed, clone the repo and install the dependenc
 ```Powershell
 git clone git://github.com/szul/gruntstarter.git
 cd gruntstarter
-npm init
+npm install
 cd static
-bower init
+bower install
 ```
 
 You can now run the `grunt` commands or `node server.js` to see the test web page consuming the grunt output.
