@@ -1,3 +1,4 @@
+// A task runner configuration.
 {
     "version": "0.1.0",
     "command": "grunt",
