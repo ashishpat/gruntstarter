@@ -13,7 +13,6 @@ Once node.js is installed, you'll have to install the Grunt CLI, Bower, and Type
 npm install grunt-cli -g
 npm install bower -g
 npm install typescript -g
-npm install manifoldjs -g
 ```
 
 Once the global packages are installed, clone the repo and install the dependencies:
@@ -29,5 +28,3 @@ bower install
 You can now run the `grunt` commands or `node server.js` to see the test web page consuming the grunt output.
 
 ### Grunt Plugins
-
-The following Grunt plugins are 
